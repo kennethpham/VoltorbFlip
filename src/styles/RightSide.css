@@ -1,0 +1,194 @@
+.right {
+    grid-area: right;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'rM rM'
+    'rP rV';
+}
+
+.rMultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: rM;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.rPic {
+    position: relative;
+    top: -5px;
+    grid-area: rP;
+    text-align: center;
+    font-size: 40px;
+}
+
+.rVoltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: rV;
+    text-align: center;
+    font-size: 40px;
+}
+
+.right1 {
+    grid-area: right1;
+    position: relative;
+    top: 30px;
+    left: 10px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'r1M r1M'
+    'r1P r1V';
+}
+
+.r1MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: r1M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.r1Pic {
+    position: relative;
+    top: -5px;
+    grid-area: r1P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.r1Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: r1V;
+    text-align: center;
+    font-size: 40px;
+}
+
+.right2 {
+    grid-area: right2;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    height: 98.46px;
+    width: 98.46px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'r2M r2M'
+    'r2P r2V';
+}
+
+.r2MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: r2M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.r2Pic {
+    position: relative;
+    top: -5px;
+    grid-area: r2P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.r2Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: r2V;
+    text-align: center;
+    font-size: 40px;
+}
+
+.right3 {
+    grid-area: right3;
+    position: relative;
+    top: 70px;
+    left: 10px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'r3M r3M'
+    'r3P r3V';
+}
+
+.r3MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: r3M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.r3Pic {
+    position: relative;
+    top: -5px;
+    grid-area: r3P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.r3Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: r3V;
+    text-align: center;
+    font-size: 40px;
+}
+
+.right4 {
+    grid-area: right4;
+    position: relative;
+    top: 90px;
+    left: 10px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'r4M r4M'
+    'r4P r4V';
+}
+
+.r4MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: r4M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.r4Pic {
+    position: relative;
+    top: -5px;
+    grid-area: r4P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.r4Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: r4V;
+    text-align: center;
+    font-size: 40px;
+}

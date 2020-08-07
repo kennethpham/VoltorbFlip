@@ -1,0 +1,60 @@
+
+
+{
+    "levelOne" : 
+    [
+        3,
+        1,
+        6
+    ],
+
+    "levelTwo" : 
+    [
+        1,
+        3,
+        7
+    ],
+
+    "levelThree" : 
+    [
+        2,
+        3,
+        8
+    ],
+
+    "levelFour" : 
+    [
+        3,
+        3,
+        8
+    ],
+
+    "levelFive" : 
+    [
+        7,
+        1,
+        10
+    ],
+
+    "levelSix" : 
+    [
+        3,
+        4,
+        10
+    ],
+
+    "levelSeven" : 
+    [
+        7,
+        2,
+        10
+    ],
+
+    "levelEight" : 
+    [
+        0,
+        7,
+        10
+    ]
+
+}

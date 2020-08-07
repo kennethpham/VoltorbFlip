@@ -1,0 +1,27 @@
+.leftSide-container {
+    display: grid;
+    position: relative;
+    left: -10px;
+    grid-template: 
+    'level'
+    'score';
+}
+
+.score {
+    grid-area: score;
+    /* position: relative;
+    top: 10px;
+    left: -44px; */
+    height: 30px;
+    width: 98px;
+    border: 1px solid black;
+}
+
+.level {
+    grid-area: level;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 98px;
+    border: 1px solid black;
+}

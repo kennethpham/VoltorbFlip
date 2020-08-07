@@ -1,0 +1,35 @@
+.game-container{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+        'top top top top top top'
+        'left middle middle middle middle right'
+        'left middle middle middle middle right'
+        'left middle middle middle middle right'
+        'left middle middle middle middle right'
+        'left middle middle middle middle right'
+        'bottom bottom bottom bottom bottom bottom';
+    
+}
+
+.top {
+    grid-area: top;
+}
+
+.middle {
+    grid-area: middle;
+}
+
+.leftSide {
+    grid-area: left;
+}
+
+.rightSide {
+    grid-area: right;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+

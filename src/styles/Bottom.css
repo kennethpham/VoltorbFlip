@@ -1,0 +1,202 @@
+.bot {
+    grid-area: bot;
+    position: relative;
+    top: 10px;
+    left: 110px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'bM bM'
+    'bP bV';
+}
+
+.bMultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: bM;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.bPic {
+    position: relative;
+    top: -5px;
+    grid-area: bP;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bVoltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: bV;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bot1 {
+    grid-area: bot1;
+    position: relative;
+    top: 10px;
+    left: 70px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'b1M b1M'
+    'b1P b1V';
+}
+
+.b1MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: b1M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.b1Pic {
+    position: relative;
+    top: -5px;
+    grid-area: b1P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.b1Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: b1V;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bot2 {
+    grid-area: bot2;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'b2M b2M'
+    'b2P b2V';
+}
+
+.b2MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: b2M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.b2Pic {
+    position: relative;
+    top: -5px;
+    grid-area: b2P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.b2Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: b2V;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.bot3 {
+    grid-area: bot3;
+    position: relative;
+    top: 10px;
+    left: -11px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'b3M b3M'
+    'b3P b3V';
+}
+
+.b3MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: b3M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.b3Pic {
+    position: relative;
+    top: -5px;
+    grid-area: b3P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.b3Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: b3V;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bot4 {
+    grid-area: bot4;
+    position: relative;
+    top: 10px;
+    left: -51px;
+    height: 98px;
+    width: 98px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: 
+    'b4M b4M'
+    'b4P b4V';
+}
+
+.b4MultTotal {
+    position: relative;
+    top: -5px;
+    grid-area: b4M;
+    text-align: center;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.b4Pic {
+    position: relative;
+    top: -5px;
+    grid-area: b4P;
+    text-align: center;
+    font-size: 40px;
+}
+
+.b4Voltorbs {
+    position: relative;
+    top: -5px;
+    grid-area: b4V;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.bottom-container {
+    display: grid;
+    grid-template: 
+        'bot bot1 bot2 bot3 bot4';
+}
