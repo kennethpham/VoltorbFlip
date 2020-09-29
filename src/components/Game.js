@@ -13,10 +13,12 @@ class Game extends React.Component {
             boardVals : [],
             numZeros: [],
             totals: [],
-            score: 1
+            score: 1,
+            tileBools: []
         }
         this.createBoardValues = this.createBoardValues.bind(this);
         this.updateScore = this.updateScore.bind(this);
+        this.changeBool = this.changeBool.bind(this);
     }
 
     createBoardValues() {
@@ -102,8 +104,12 @@ class Game extends React.Component {
             totals.push(currTotals);
             currTotals = 0;
         }
-        console.log(newZeros);
-        console.log(totals);
+        // console.log(newZeros);
+        // console.log(totals);
+        var bools = [];
+        for (i = 0; i < 25; i++) {
+            bools.push(true);
+        }
 
 
         // if (nextLvl !== 0) {
@@ -112,12 +118,14 @@ class Game extends React.Component {
                     id: ids,
                     boardVals: newVals,
                     numZeros: newZeros,
-                    totals: totals
+                    totals: totals,
+                    tileBools: bools
                 }
                 
             })
         // }
         // console.log(this.state.totals);
+
     }
 
     updateScore(val) {
@@ -131,6 +139,14 @@ class Game extends React.Component {
         this.createBoardValues();
     }
 
+    changeBool(val) {
+        var newBools = this.state.tileBools;
+        newBools[val] = false;
+        this.setState({
+            tileBools: newBools
+        })
+    }
+
     render(){
         return(
             <div className="game-container">
@@ -138,9 +154,10 @@ class Game extends React.Component {
                     Voltorb Flip
                 </h1>
                 <div className="middle">
-                    <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros}/>
+                    <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros} tileBools={this.state.tileBools} changeBool={this.changeBool}/>
                 </div>
                 <div className="leftSide">
+                    <button onClick={this.createBoardValues}>newBoard</button>
                     <LeftSide score={this.state.score} lvl={this.state.lvl}/>
                 </div>
                 <div className="rightSide">

@@ -2,9 +2,9 @@ import React from 'react';
 import '../styles/LeftSide.css'
 
 class LeftSide extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
     render() {
         return(
             <div className="leftSide-container">
