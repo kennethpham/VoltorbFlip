@@ -31,101 +31,154 @@ class Game extends React.Component {
             ids[i] = i;
             newVals[i] = 1;
         }
+        var level = "";
         switch (nextLvl) {
             case 1: /* lvl1 test case */
-                var localData = require('../data/boardValues.json')
-                var twos = localData["levelOne"][0]
-                var threes = localData["levelOne"][1]
-                var zeros = localData["levelOne"][2]
-                var used = [];
-                var curr = 0;
-                for (i = 0; i < zeros; i++){
-                    curr = Math.floor(Math.random() * Math.floor(max));
-                    while (used.includes(curr)){
-                        curr = Math.floor(Math.random() * Math.floor(max));
-                    }
-                    used.push(curr);
-                    newVals[curr] = 0;
-                }
-                for (i = 0; i < threes; i++){
-                    curr = Math.floor(Math.random() * Math.floor(max));
-                    while (used.includes(curr)){
-                        curr = Math.floor(Math.random() * Math.floor(max));
-                    }
-                    used.push(curr);
-                    newVals[curr] = 3;
-                }
-                for (i = 0; i < twos; i++){
-                    curr = Math.floor(Math.random() * Math.floor(max));
-                    while (used.includes(curr)){
-                        curr = Math.floor(Math.random() * Math.floor(max));
-                    }
-                    used.push(curr);
-                    newVals[curr] = 2;
-                }
+                // var localData = require('../data/boardValues.json')
+                // var twos = localData["levelOne"][0]
+                // var threes = localData["levelOne"][1]
+                // var zeros = localData["levelOne"][2]
+                // var used = [];
+                // var curr = 0;
+                // for (i = 0; i < zeros; i++){
+                //     curr = Math.floor(Math.random() * Math.floor(max));
+                //     while (used.includes(curr)){
+                //         curr = Math.floor(Math.random() * Math.floor(max));
+                //     }
+                //     used.push(curr);
+                //     newVals[curr] = 0;
+                // }
+                // for (i = 0; i < threes; i++){
+                //     curr = Math.floor(Math.random() * Math.floor(max));
+                //     while (used.includes(curr)){
+                //         curr = Math.floor(Math.random() * Math.floor(max));
+                //     }
+                //     used.push(curr);
+                //     newVals[curr] = 3;
+                // }
+                // for (i = 0; i < twos; i++){
+                //     curr = Math.floor(Math.random() * Math.floor(max));
+                //     while (used.includes(curr)){
+                //         curr = Math.floor(Math.random() * Math.floor(max));
+                //     }
+                //     used.push(curr);
+                //     newVals[curr] = 2;
+                // }
                 // console.log(newVals);
                 // console.log(ids);
+                level = "levelOne";
                 break;
             case 2:
+                level = "levelTwo";
                 break;
+            case 3:
+                level = "levelThree";
+                break;
+            case 4:
+                level = "levelThree";
+                break;
+            case 5:
+                level = "levelFour";
+                break;
+            case 6:
+                level = "levelSix";
+                break;
+            case 7:
+                level = "levelSeven";
+                break;
+            case 8:
+                level = "levelEight";
+                break;
+                
             default:
                 console.log('default')
         }
+        if (level !== ""){
+            var localData = require('../data/boardValues.json')
+            var twos = localData[level][0]
+            var threes = localData[level][1]
+            var zeros = localData[level][2]
+            var used = [];
+            var curr = 0;
+            for (i = 0; i < zeros; i++){
+                curr = Math.floor(Math.random() * Math.floor(max));
+                while (used.includes(curr)){
+                    curr = Math.floor(Math.random() * Math.floor(max));
+                }
+                used.push(curr);
+                newVals[curr] = 0;
+            }
+            for (i = 0; i < threes; i++){
+                curr = Math.floor(Math.random() * Math.floor(max));
+                while (used.includes(curr)){
+                    curr = Math.floor(Math.random() * Math.floor(max));
+                }
+                used.push(curr);
+                newVals[curr] = 3;
+            }
+            for (i = 0; i < twos; i++){
+                curr = Math.floor(Math.random() * Math.floor(max));
+                while (used.includes(curr)){
+                    curr = Math.floor(Math.random() * Math.floor(max));
+                }
+                used.push(curr);
+                newVals[curr] = 2;
+            }
+            
+            var currZeros = 0;
+            var newZeros = [];
+            var totals = [];
+            var currTotals = 0;
+            for (i = 0; i < 5; i++){
+                for (j = 0; j < 5; j++){
+                    if (newVals[((5*i)+j)] === 0){
+                        currZeros += 1;
+                    }
+                    else {
+                        currTotals += newVals[((5*i)+j)];
+                    }
+                }
+                newZeros.push(currZeros);
+                currZeros = 0;
+                totals.push(currTotals)
+                currTotals = 0;
+            }
+            for (i = 0; i < 5; i++){
+                for (j = 0; j < 5; j++){
+                    if(newVals[(5*j)+i] === 0){
+                        currZeros += 1;
+                    }
+                    else {
+                        currTotals += newVals[((5*j)+i)];
+                    }
+                }
+                newZeros.push(currZeros);
+                currZeros = 0;
+                totals.push(currTotals);
+                currTotals = 0;
+            }
+            // console.log(newZeros);
+            // console.log(totals);
+            var bools = [];
+            for (i = 0; i < 25; i++) {
+                bools.push(true);
+            }
+                this.setState((state) => {
+                    return {
+                        lvl: nextLvl,
+                        id: ids,
+                        boardVals: newVals,
+                        numZeros: newZeros,
+                        totals: totals,
+                        tileBools: bools
+                    }
+                    
+                })
+        }
+        else {
+
+        }
         
-        var currZeros = 0;
-        var newZeros = [];
-        var totals = [];
-        var currTotals = 0;
-        for (i = 0; i < 5; i++){
-            for (j = 0; j < 5; j++){
-                if (newVals[((5*i)+j)] === 0){
-                    currZeros += 1;
-                }
-                else {
-                    currTotals += newVals[((5*i)+j)];
-                }
-            }
-            newZeros.push(currZeros);
-            currZeros = 0;
-            totals.push(currTotals)
-            currTotals = 0;
-        }
-        for (i = 0; i < 5; i++){
-            for (j = 0; j < 5; j++){
-                if(newVals[(5*j)+i] === 0){
-                    currZeros += 1;
-                }
-                else {
-                    currTotals += newVals[((5*j)+i)];
-                }
-            }
-            newZeros.push(currZeros);
-            currZeros = 0;
-            totals.push(currTotals);
-            currTotals = 0;
-        }
-        // console.log(newZeros);
-        // console.log(totals);
-        var bools = [];
-        for (i = 0; i < 25; i++) {
-            bools.push(true);
-        }
-
-
-        // if (nextLvl !== 0) {
-            this.setState((state) => {
-                return {
-                    id: ids,
-                    boardVals: newVals,
-                    numZeros: newZeros,
-                    totals: totals,
-                    tileBools: bools
-                }
-                
-            })
-        // }
-        // console.log(this.state.totals);
-
     }
 
     updateScore(val) {
