@@ -14,7 +14,8 @@ class Game extends React.Component {
             numZeros: [],
             totals: [],
             score: 1,
-            tileBools: []
+            tileBools: [],
+            gameOver: false,
         }
         this.createBoardValues = this.createBoardValues.bind(this);
         this.updateScore = this.updateScore.bind(this);
@@ -170,7 +171,9 @@ class Game extends React.Component {
                         boardVals: newVals,
                         numZeros: newZeros,
                         totals: totals,
-                        tileBools: bools
+                        tileBools: bools,
+                        gameOver: false,
+                        score: 1
                     }
                     
                 })
@@ -178,6 +181,7 @@ class Game extends React.Component {
         else {
 
         }
+        console.log(newVals)
         
     }
 
@@ -186,6 +190,21 @@ class Game extends React.Component {
         this.setState({
             score : newScore
         })
+        if (newScore === 0) {
+            var bools = [];
+            var i = 0;
+            for (i = 0; i < 25; i++) {
+                bools.push(false);
+            }
+            this.setState({
+                tileBools: bools,
+                gameOver: true,
+                lvl: 0
+            })
+        }
+        else {
+        }
+        console.log(this.state.score)
     }
 
     componentDidMount() {
@@ -202,23 +221,30 @@ class Game extends React.Component {
 
     render(){
         return(
-            <div className="game-container">
-                <h1 className="top">
-                    Voltorb Flip
-                </h1>
-                <div className="middle">
-                    <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros} tileBools={this.state.tileBools} changeBool={this.changeBool}/>
-                </div>
-                <div className="leftSide">
-                    <button onClick={this.createBoardValues}>newBoard</button>
-                    <LeftSide score={this.state.score} lvl={this.state.lvl}/>
-                </div>
-                <div className="rightSide">
-                    <RightSide totals={this.state.totals} numZeros={this.state.numZeros}/>
-                </div>
-                <div className="bottom">
-                    <Bottom totals={this.state.totals} numZeros={this.state.numZeros}/>
-                </div>
+            <div className="page-container">
+                {!this.state.gameOver ?
+                    <div className="game-container">
+                        <h1 className="top">
+                            Voltorb Flip
+                        </h1>
+                        <div className="middle">
+                            <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros} tileBools={this.state.tileBools} changeBool={this.changeBool}/>
+                        </div>
+                        <div className="leftSide">
+                            <button onClick={this.createBoardValues}>newBoard</button>
+                            <LeftSide score={this.state.score} lvl={this.state.lvl}/>
+                        </div>
+                        <div className="rightSide">
+                            <RightSide totals={this.state.totals} numZeros={this.state.numZeros}/>
+                        </div>
+                        <div className="bottom">
+                            <Bottom totals={this.state.totals} numZeros={this.state.numZeros}/>
+                        </div>
+                    </div>
+                    : <div>game over
+                        <button onClick={this.createBoardValues}>newBoard</button>
+                      </div>}
+                
             </div>
         )
     }

@@ -11,6 +11,7 @@ class Tile extends React.Component {
 
     onClick() {
         this.props.changeBool(this.props.id)
+        this.props.updateScore(this.props.val)
     }
     
 
