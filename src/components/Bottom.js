@@ -2,10 +2,6 @@ import React from 'react';
 import '../styles/Bottom.css'
 
 class Bottom extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return(
             <div className='bottom-container'>
