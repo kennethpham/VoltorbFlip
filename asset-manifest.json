@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/VoltorbFlip/static/css/main.78776c19.chunk.css",
-    "main.js": "/VoltorbFlip/static/js/main.425aab70.chunk.js",
-    "main.js.map": "/VoltorbFlip/static/js/main.425aab70.chunk.js.map",
+    "main.js": "/VoltorbFlip/static/js/main.f956fe56.chunk.js",
+    "main.js.map": "/VoltorbFlip/static/js/main.f956fe56.chunk.js.map",
     "runtime-main.js": "/VoltorbFlip/static/js/runtime-main.4db08e3a.js",
     "runtime-main.js.map": "/VoltorbFlip/static/js/runtime-main.4db08e3a.js.map",
     "static/js/2.1b83abb4.chunk.js": "/VoltorbFlip/static/js/2.1b83abb4.chunk.js",
     "static/js/2.1b83abb4.chunk.js.map": "/VoltorbFlip/static/js/2.1b83abb4.chunk.js.map",
     "index.html": "/VoltorbFlip/index.html",
-    "precache-manifest.d70d0007dad5940d7e0e96f84fa25464.js": "/VoltorbFlip/precache-manifest.d70d0007dad5940d7e0e96f84fa25464.js",
+    "precache-manifest.be5621872063d25e4031c978147ce6e9.js": "/VoltorbFlip/precache-manifest.be5621872063d25e4031c978147ce6e9.js",
     "service-worker.js": "/VoltorbFlip/service-worker.js",
     "static/css/main.78776c19.chunk.css.map": "/VoltorbFlip/static/css/main.78776c19.chunk.css.map",
     "static/js/2.1b83abb4.chunk.js.LICENSE.txt": "/VoltorbFlip/static/js/2.1b83abb4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4db08e3a.js",
     "static/js/2.1b83abb4.chunk.js",
     "static/css/main.78776c19.chunk.css",
-    "static/js/main.425aab70.chunk.js"
+    "static/js/main.f956fe56.chunk.js"
   ]
 }
