@@ -5,7 +5,6 @@ class Tile extends React.Component {
     constructor(props) {
         super(props)
         this.onClick = this.onClick.bind(this);
-        // console.log(this.state.hidden)
     }
 
 

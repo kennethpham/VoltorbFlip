@@ -9,10 +9,6 @@ class Board extends React.Component {
         this.tileItem = this.tileItem.bind(this);
     }
 
-    // componentDidUpdate(){
-    //     console.log(this.props.ids);
-    // }
-
     tileItem(num) {
         return <div className={'tile'.concat(num.toString())} key = {num}>
                     <Tile val={this.props.vals[num]} updateScore={this.props.updateScore} tileBools={this.props.tileBools} id={num} changeBool={this.props.changeBool}/>

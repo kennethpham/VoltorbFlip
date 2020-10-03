@@ -16,6 +16,8 @@ class Game extends React.Component {
             score: 1,
             tileBools: [],
             gameOver: false,
+            scoreTotal: 0,
+            nextLvl: false
         }
         this.createBoardValues = this.createBoardValues.bind(this);
         this.updateScore = this.updateScore.bind(this);
@@ -35,38 +37,6 @@ class Game extends React.Component {
         var level = "";
         switch (nextLvl) {
             case 1: /* lvl1 test case */
-                // var localData = require('../data/boardValues.json')
-                // var twos = localData["levelOne"][0]
-                // var threes = localData["levelOne"][1]
-                // var zeros = localData["levelOne"][2]
-                // var used = [];
-                // var curr = 0;
-                // for (i = 0; i < zeros; i++){
-                //     curr = Math.floor(Math.random() * Math.floor(max));
-                //     while (used.includes(curr)){
-                //         curr = Math.floor(Math.random() * Math.floor(max));
-                //     }
-                //     used.push(curr);
-                //     newVals[curr] = 0;
-                // }
-                // for (i = 0; i < threes; i++){
-                //     curr = Math.floor(Math.random() * Math.floor(max));
-                //     while (used.includes(curr)){
-                //         curr = Math.floor(Math.random() * Math.floor(max));
-                //     }
-                //     used.push(curr);
-                //     newVals[curr] = 3;
-                // }
-                // for (i = 0; i < twos; i++){
-                //     curr = Math.floor(Math.random() * Math.floor(max));
-                //     while (used.includes(curr)){
-                //         curr = Math.floor(Math.random() * Math.floor(max));
-                //     }
-                //     used.push(curr);
-                //     newVals[curr] = 2;
-                // }
-                // console.log(newVals);
-                // console.log(ids);
                 level = "levelOne";
                 break;
             case 2:
@@ -99,6 +69,7 @@ class Game extends React.Component {
             var twos = localData[level][0]
             var threes = localData[level][1]
             var zeros = localData[level][2]
+            var scoreTotal = 2**twos * 3**threes
             var used = [];
             var curr = 0;
             for (i = 0; i < zeros; i++){
@@ -158,8 +129,6 @@ class Game extends React.Component {
                 totals.push(currTotals);
                 currTotals = 0;
             }
-            // console.log(newZeros);
-            // console.log(totals);
             var bools = [];
             for (i = 0; i < 25; i++) {
                 bools.push(true);
@@ -173,16 +142,14 @@ class Game extends React.Component {
                         totals: totals,
                         tileBools: bools,
                         gameOver: false,
-                        score: 1
+                        score: 1,
+                        scoreTotal: scoreTotal,
+                        nextLvl: false
                     }
                     
                 })
         }
-        else {
 
-        }
-        console.log(newVals)
-        
     }
 
     updateScore(val) {
@@ -190,6 +157,11 @@ class Game extends React.Component {
         this.setState({
             score : newScore
         })
+        if (newScore === this.state.scoreTotal) {
+            this.setState({
+                nextLvl: true
+            })
+        }
         if (newScore === 0) {
             var bools = [];
             var i = 0;
@@ -200,11 +172,11 @@ class Game extends React.Component {
                 tileBools: bools,
                 gameOver: true,
                 lvl: 0
+
             })
         }
         else {
         }
-        console.log(this.state.score)
     }
 
     componentDidMount() {
@@ -222,28 +194,39 @@ class Game extends React.Component {
     render(){
         return(
             <div className="page-container">
-                {!this.state.gameOver ?
-                    <div className="game-container">
-                        <h1 className="top">
-                            Voltorb Flip
-                        </h1>
-                        <div className="middle">
-                            <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros} tileBools={this.state.tileBools} changeBool={this.changeBool}/>
-                        </div>
-                        <div className="leftSide">
-                            <button onClick={this.createBoardValues}>newBoard</button>
-                            <LeftSide score={this.state.score} lvl={this.state.lvl}/>
-                        </div>
-                        <div className="rightSide">
-                            <RightSide totals={this.state.totals} numZeros={this.state.numZeros}/>
-                        </div>
-                        <div className="bottom">
-                            <Bottom totals={this.state.totals} numZeros={this.state.numZeros}/>
-                        </div>
+                {this.state.gameOver ? 
+                    <div>
+                        You lost!
+                        <button onClick={this.createBoardValues}>newGame</button>
                     </div>
-                    : <div>game over
-                        <button onClick={this.createBoardValues}>newBoard</button>
-                      </div>}
+                    : <div></div>
+                }
+
+                {this.state.nextLvl ? 
+                    <div>
+                        You beat this level!
+                        <button onClick={this.createBoardValues}>nextLevel</button>
+                    </div>
+                    : <div></div>
+                }
+                <div className="game-container">
+                    <h1 className="top">
+                        Voltorb Flip
+                    </h1>
+                    <div className="middle">
+                        <Board ids={this.state.id} vals={this.state.boardVals} updateScore={this.updateScore} totals={this.state.totals} numZeros={this.state.numZeros} tileBools={this.state.tileBools} changeBool={this.changeBool}/>
+                    </div>
+                    <div className="leftSide">
+                        {/* <button onClick={this.createBoardValues}>newBoard</button> */}
+                        <LeftSide score={this.state.score} lvl={this.state.lvl}/>
+                    </div>
+                    <div className="rightSide">
+                        <RightSide totals={this.state.totals} numZeros={this.state.numZeros}/>
+                    </div>
+                    <div className="bottom">
+                        <Bottom totals={this.state.totals} numZeros={this.state.numZeros}/>
+                    </div>
+                </div>
                 
             </div>
         )
