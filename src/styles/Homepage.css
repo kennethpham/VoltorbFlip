@@ -1,3 +1,7 @@
-.homepage{
+.homepage-container{
+    position: absolute;
     text-align: center;
+    background-color: #00a478;
+    height:100%; 
+    width:100%;
 }

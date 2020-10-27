@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/RightSide.css'
+// import voltorbPic from '../../public/voltorb.png'
 
 
 class RightSide extends React.Component {
@@ -21,7 +22,7 @@ class RightSide extends React.Component {
                         {this.props.totals[0]}
                     </div>
                     <div className='rPic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='rVoltorbs' >
                         {this.props.numZeros[0]}
@@ -34,7 +35,7 @@ class RightSide extends React.Component {
                         {this.props.totals[1]}
                     </div>
                     <div className='r1Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='r1Voltorbs'>
                         {this.props.numZeros[1]}
@@ -45,7 +46,7 @@ class RightSide extends React.Component {
                         {this.props.totals[2]}
                     </div>
                     <div className='r2Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='r2Voltorbs'>
                         {this.props.numZeros[2]}
@@ -56,7 +57,7 @@ class RightSide extends React.Component {
                         {this.props.totals[3]}
                     </div>
                     <div className='r3Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='r3Voltorbs'>
                         {this.props.numZeros[3]}
@@ -67,7 +68,7 @@ class RightSide extends React.Component {
                         {this.props.totals[4]}
                     </div>
                     <div className='r4Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='r4Voltorbs'>
                         {this.props.numZeros[4]}

@@ -10,7 +10,7 @@ class Bottom extends React.Component {
                         {this.props.totals[5]}
                     </div>
                     <div className='bPic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='bVoltorbs'>
                         {this.props.numZeros[5]}
@@ -21,7 +21,7 @@ class Bottom extends React.Component {
                         {this.props.totals[6]}
                     </div>
                     <div className='b1Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='b1Voltorbs'>
                         {this.props.numZeros[6]}
@@ -32,7 +32,7 @@ class Bottom extends React.Component {
                         {this.props.totals[7]}
                     </div>
                     <div className='b2Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='b2Voltorbs'>
                         {this.props.numZeros[7]}
@@ -43,7 +43,7 @@ class Bottom extends React.Component {
                         {this.props.totals[8]}
                     </div>
                     <div className='b3Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='b3Voltorbs'>
                         {this.props.numZeros[8]}
@@ -54,7 +54,7 @@ class Bottom extends React.Component {
                         {this.props.totals[9]}
                     </div>
                     <div className='b4Pic'>
-                        V
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
                     </div>
                     <div className='b4Voltorbs'>
                         {this.props.numZeros[9]}
