@@ -22,7 +22,7 @@ class RightSide extends React.Component {
                         {this.props.totals[0]}
                     </div>
                     <div className='rPic'>
-                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} alt="voltorb"/>
                     </div>
                     <div className='rVoltorbs' >
                         {this.props.numZeros[0]}
@@ -35,7 +35,7 @@ class RightSide extends React.Component {
                         {this.props.totals[1]}
                     </div>
                     <div className='r1Pic'>
-                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} alt="voltorb"/>
                     </div>
                     <div className='r1Voltorbs'>
                         {this.props.numZeros[1]}
@@ -46,7 +46,7 @@ class RightSide extends React.Component {
                         {this.props.totals[2]}
                     </div>
                     <div className='r2Pic'>
-                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} alt="voltorb"/>
                     </div>
                     <div className='r2Voltorbs'>
                         {this.props.numZeros[2]}
@@ -57,7 +57,7 @@ class RightSide extends React.Component {
                         {this.props.totals[3]}
                     </div>
                     <div className='r3Pic'>
-                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} alt="voltorb"/>
                     </div>
                     <div className='r3Voltorbs'>
                         {this.props.numZeros[3]}
@@ -68,7 +68,7 @@ class RightSide extends React.Component {
                         {this.props.totals[4]}
                     </div>
                     <div className='r4Pic'>
-                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} />
+                        <img className='voltorb' src={process.env.PUBLIC_URL + '/voltorb.png'} alt="voltorb"/>
                     </div>
                     <div className='r4Voltorbs'>
                         {this.props.numZeros[4]}
